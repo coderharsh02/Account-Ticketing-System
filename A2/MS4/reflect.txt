@@ -1,0 +1,62 @@
+List of function prototype for all functions that are developed by me,
+
+a) commonHelpers.h - None Developed
+
+b) account.h
+void getUserPassword(char *password);
+
+c) ticket.h
+void getTicket(struct Ticket *ticketPtr, const struct Account *accPtr);	 
+void manageTick(struct Ticket *ticketPtr, const struct Account *accPtr); 
+
+d) accountTicketingUI.h
+void displayTicketDetailHeader(void);                                             
+void displayTicketDetailRecord(const struct Ticket *ticketPtr);                   
+void displayTicketMessage(const struct Ticket *ticketPtr);                        
+void displayNewTicketsDetailRecords(const struct Ticket ticketArr[], int max);    
+void displayActiveTicketsDetailRecords(const struct Ticket ticketArr[], int max); 
+void displayCloseTicketsDetailRecords(const struct Ticket ticketArr[], int max);  
+int findTicketIndexByTicNum(int ticketNumber, const struct Ticket ticketArr[], int max, int prompt);
+int loadAccounts(struct Account accountArr[], int maxSize); 
+int loadTickets(struct Ticket ticketArr[], int maxSize);    
+int saveAccounts(const struct Account accountArr[], int maxSize);
+int saveTickets(const struct Ticket ticketArr[], int maxSize);
+
+    Two major components that I liked to develop are commonHelpers module and 
+implementation of persistent storage. CommonHelpers module is one of the most 
+used module throughout the assignment, as the name says it provides commonly 
+needed functions to all other modules, whether it is taking integer, a 
+positive integer, range based integer input for the selection of choice by 
+user for menu option or double, positive double input to hold household income, 
+or to get any c-string as input from the user for storing it in various 
+attributes such as fullName, username, password, all of these common functions 
+provided by commonHelpers module came in handy. This module helps to reuse 
+the code as much as possible. Another feature is persistent storage, 
+any application needs data so that it can perform certain operations on it 
+certainly CURD(create, update, read, delete) operations, but if the application 
+always starts from a new state whenever we execute it then it's not of any 
+use, that is why we need to store the data into the files when the application
+is closed so that whenever the application is started again it starts from its 
+previous state. MS3 and MS4 were focused on this functionality and I created 
+two functions for loading accounts and tickets data from the files, and two 
+for saving the current state of the application to the files. I was not so good 
+when it comes to the file handling, but this time with the help of course notes 
+and recorded lectures, I was able to develop these functions and now I can work 
+with any kind of file handling. Other than this I like to develop the function 
+which takes the user password and validate it, it was something logical.
+
+    There's no particular feature that I don't like to develop but still, there are 
+some functionalities that I would like to add to the system. For example, in the 
+current system only agents are allowed to log in, creation and management of the
+ticket is also handled by agents, for customers, there are only accounts and the
+tickets related to them but these tickets are not created by customers they are 
+created by agents. customers cannot create their ticket or add messages to their 
+ticket directly, they cannot even change the state of their ticket only agents can 
+do all this. I think customers should also have a username and password and they 
+can too login to the system and create their own ticket, add a message to it and 
+update its status, then only it would be a full-fledged application. Other than this 
+I disliked developing functions that are used to display accounts and tickets details
+on the console. We need to match the exact output and the formatting was difficult, 
+I know how important it is to display results properly to the end-user, but I couldn't 
+find it logical enough to give a lot of time to them. I don't have much dislikes 
+towards this project as it has considerably improved my programming skills.

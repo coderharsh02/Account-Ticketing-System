@@ -1,0 +1,66 @@
+We can always implement string functions on our own, still, the functions
+provided by the library are safely coded and tested by a lot of developers,
+so as long as we know how a particular library function is working,
+we can use library functions. The most used library function by me
+for this project is strcpy. It takes two parameters source and destination
+char pointers and copies the destination character array to the 
+source character array up to the null character. We can also implement 
+this function using the for loop which would run from 0 to src[i]!='\0'.
+But using this function reduces many bugs in our implementation. 
+I have used this function wherever I need to copy strings. So I think
+strcpy is my favourite string function.
+
+All the new function prototypes that I have added in MS1 and MS2 for 
+assignment 2:-
+
+For account.h newly added functions
+void getUserPassword(char *password);	// get the user password with all specification	
+
+For accountTicketingUI.h newly added functions
+int findTicketIndexByTicNum(int ticketNumber, const struct Ticket ticketArr[], int max, int prompt);      // returns index for a ticket number
+void displayTicketDetailHeader(void);                                             // display Ticket detail header
+void displayTicketDetailRecord(const struct Ticket *ticketPtr);                   // display ticket details
+void displayTicketMessage(const struct Ticket *ticketPtr);                        // display Ticket's messages
+void displayNewTicketsDetailRecords(const struct Ticket ticketArr[], int max);    // display New tickets detailed records
+void displayActiveTicketsDetailRecords(const struct Ticket ticketArr[], int max); // display Active tickets detailed records
+void displayCloseTicketsDetailRecords(const struct Ticket ticketArr[], int max);  // display Closed tickets detailed records
+
+Newly created header file ticket.h
+void getTicket(struct Ticket *ticketPtr, const struct Account *accPtr);	 // get the new ticket details from the agent and returns it using modifiable Ticket pointer
+void manageTick(struct Ticket *ticketPtr, const struct Account *accPtr); // manages the ticket giving different option
+
+I have created these functions and included them in a particular module  
+depending on what they are doing and where the update is made. Also 
+I have suppressed my feeling of including certain functions in a particular
+module by looking at the previous includes of similar kinds of functions.
+
+1. getUserPassword 
+    The password entered by agents need to follow a certain logic and it was
+a 20-25 lines of code, so instead of making my function bulky, I created
+a new function to take user inputs for the password field and as it was
+all working on the creation of an account, I included it in the account module.
+
+2. findTicketIndexByTicNum
+    As findAccountIndexByAcctNum was instructed to be implemented I consider
+this function too would help at many places for finding an index of ticket by 
+ticket number and truly it comes handy for retrieving index for a ticket for
+addition of messages by customer or agent or to update the status. As
+findAccountIndexByAcctNum was included in accountTicketingUI module, I 
+included this function in this module. 
+
+3. displayTicketDetailHeader, displayTicketDetailRecord, displayTicketMessage, 
+displayNewTicketsDetailRecords, displayActiveTicketsDetailRecords, 
+displayCloseTicketsDetailRecords 
+    All of these are implemented and given names following the same convention
+as followed for the display function for accounts. According to me, these display 
+functions for account and ticket should go to their respective modules 
+i.e, account.h and ticket.h as they are particular to those structures. But as
+display functions for the account were included in the accountTicketingUI module,
+I have included display functions for the tickets to this module.
+
+4. Newly created module ticket.h and including getTicket and manageTick 
+    similar to account.h where functions are working on account structures
+getting inputs for the creation of their objects and updating those created objects.
+Here we have a similar function for the tickets, those works when we create a new 
+ticket or whenever we need to update a ticket. That's why I created a new 
+module ticket.h and included these functions in it.

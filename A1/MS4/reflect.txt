@@ -1,0 +1,33 @@
+Matching the output is somewhat similar to forming the logic. Whenever
+we create an application, user needs to interact with it and providing
+a better user interface is always a win. Logic formation for the 
+application takes 70% of time and 30% is for matching the output.
+This challenge teaches a lot of things that otherwise would be missed,
+like showing hidden password, managing new lines, displaying output in
+indented manner, all of this is helps to understand the core of functions,
+that otherwise would not be explored. So maybe it would be frustrating,
+still I like this challenge and when you match that output and the line
+that says, success! your output match... It feels so good.
+
+While naming the module we must select a name that can give insight of 
+what might be included in the module. This helps the programmer to not
+to get confuse and can include the modules without a second thought.
+Like module commonHelpers, it's name shows that this module may contain
+functions that are basic and need in many places. Next, account module
+contains account class, so the name of the module should show what would
+be included in the module. Naming header and source file with same name
+is best practice, we don't need to think about name of header file While
+working on source file as both of their name would be same.
+
+Cascading menu system means, menu inside menu that goes on, this type
+of application is known as menu-driven application. It is the good way
+of interacting with user in console window. In our application we have
+cascading menu structure like:
+
+                Agent                |---> add        |---> update account
+              |------> menuAgent ----|---> modify ----|---> update person
+menuLogin ----                       |---> delete     |---> update login 
+(login, exit) |-------> Error!       |---> read                   
+     
+In each menu we have put user selection and that also with the help of 
+commonHelpers module that gives a lot of great methods. 

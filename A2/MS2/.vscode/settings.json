@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "commonhelpers.h": "c",
+        "ticket.h": "c",
+        "account.h": "c"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "tic.h": "c",
+        "ticket.h": "c"
+    }
+}
