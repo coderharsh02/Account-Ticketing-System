@@ -1,7 +1,8 @@
-//  Assignment #1 Milestone #1
-//  Your full name
-//  Your student ID number and Seneca email address
-//  Your course section code
+// #############################################################################################
+//  Assignment: 2
+//  Milestone : 1
+// #############################################################################################
+
 #include <stdio.h>
 #include <time.h>
 #include "commonHelpers.h"

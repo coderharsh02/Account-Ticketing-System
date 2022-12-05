@@ -1,22 +1,7 @@
 // #############################################################################################
-//
-//  Assignment:  1 
-//  Milestone:   1
-//  Description: Main logic/tester
-//
-// +---------------------------------------------------------+
-// | *** The contents of this file is NOT to be modified *** |    
-// +---------------------------------------------------------+
-//
-//                         HOWEVER....
-//
-// In the development of your solution, you can...
-// -----------------------------------------------
-// - Comment out the lines of code which call a function you have not yet developed
-//   (See each tester function definition to see where you can do this)
-// - Uncomment the lines of code previously commented to return the file to its
-//   original state so you may fully test your solution.
-// 
+//  Assignment: 1
+//  Milestone : 1
+//  Tester Program
 // #############################################################################################
 
 #define _CRT_SECURE_NO_WARNINGS

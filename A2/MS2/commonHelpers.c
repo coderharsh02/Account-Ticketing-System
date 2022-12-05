@@ -1,8 +1,9 @@
+// #############################################################################################
+//  Assignment: 2
+//  Milestone : 2
+// #############################################################################################
+
 #define _CRT_SECURE_NO_WARNINGS
-//  Assignment #1 Milestone #1
-//  Your full name
-//  Your student ID number and Seneca email address
-//  Your course section code
 #include <stdio.h>
 #include <time.h>
 #include "commonHelpers.h"

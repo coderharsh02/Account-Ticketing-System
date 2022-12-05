@@ -1,3 +1,5 @@
+# auto input script for A1-MS4
+
 import pyautogui as gui
 import time
 

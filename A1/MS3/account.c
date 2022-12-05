@@ -1,9 +1,11 @@
+// #############################################################################################
+//  Assignment: 1 
+//  Milestone : 3
+// #############################################################################################
+
 #include <stdio.h>
 #include "account.h"
 #include "commonHelpers.h"
-// struct Account account = { 0 };
-// struct UserLogin login = { {0} };
-// struct Demographic demographic = { 0 };
 
 // get the account details from the user and returns it using modifiable Account pointer
 void getAccount(struct Account *accPtr)
